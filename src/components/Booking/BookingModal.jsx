@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import BookingForm from "../forms/BookingForm";
+import WhatsappForm from "../forms/WhatsappViaForm";
 
 const BookingModal = ({ open, onClose }) => {
   if (!open) return null;
@@ -7,21 +7,20 @@ const BookingModal = ({ open, onClose }) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center px-4"
+        className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center"
+        onClick={onClose}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        onClick={onClose}
       >
         <motion.div
           onClick={(e) => e.stopPropagation()}
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          exit={{ scale: 0.9, opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          className="w-full max-w-6xl"
+          className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl p-8"
+          initial={{ scale: 0.95 }}
+          animate={{ scale: 1 }}
+          exit={{ scale: 0.95 }}
         >
-          <BookingForm onClose={onClose} />
+          <WhatsappForm onClose={onClose} />
         </motion.div>
       </motion.div>
     </AnimatePresence>

@@ -1,20 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@keyframes flicker {
-  0% { opacity: 1; }
-  5% { opacity: 0.5; }
-  10% { opacity: 1; }
-  15% { opacity: 0.8; }
-  25% { opacity: 1; }
-  100% { opacity: 1; }
-}
-
-.animate-flicker {
-  animation: flicker 3s linear infinite;
-}
-
-.smooth-scroll {
-  scroll-behavior: smooth;
-}
