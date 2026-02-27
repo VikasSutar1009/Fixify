@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -73,3 +74,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # Fixify
 This include fixify website
 >>>>>>> 17212520bd73b87d721605f009c0f6f256af7860
+=======
+# Fixify
+This include fixify website
+>>>>>>> d6ca9995c15735d46c53929ce2795ee098fe79df
