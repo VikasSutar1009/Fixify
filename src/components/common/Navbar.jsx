@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import {
   Instagram,
   Facebook,
-  Twitter,
   Menu,
   X,
   MessageCircle,
@@ -16,14 +15,25 @@ const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR */}
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-40 w-[60%] max-w-7xl">
         <div className="bg-white/90 backdrop-blur-md px-8 py-4 rounded-full flex items-center justify-between shadow-lg">
 
           {/* Logo */}
-          <Link to="/" className="leading-tight cursor-pointer">
-            <div className="text-2xl font-black text-slate-900">FIXIFY</div>
-            <div className="text-sm text-slate-500">At your service</div>
+          <Link to="/" className="flex items-center gap-1 cursor-pointer">
+            <img
+            src="/fixify-logo.png"
+            alt="Fixify Logo"
+            className="w-16 h-16 object-contain"
+            />
+
+            <div className="leading-tight">
+              <div className="text-xl font-black text-slate-900">
+                FIXIFY
+              </div>
+              <div className="text-sm text-slate-500">
+                At your service
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Links */}
@@ -54,15 +64,13 @@ const Navbar = () => {
 
           {/* Social Icons */}
           <div className="hidden md:flex items-center gap-4 text-slate-400">
-            <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/fixify_atyourservice?igsh=NTVpb21ocXpxZXBt" target="_blank" rel="noreferrer">
               <Instagram size={18} className="hover:text-pink-500" />
             </a>
-            <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/share/1FnVSgXz7Q/" target="_blank" rel="noreferrer">
               <Facebook size={18} className="hover:text-blue-600" />
             </a>
-            <a href="https://www.twitter.com" target="_blank" rel="noreferrer">
-              <Twitter size={18} className="hover:text-sky-500" />
-            </a>
+            
             <a href="https://wa.me/919130804848" target="_blank" rel="noreferrer">
               <MessageCircle size={18} className="hover:text-green-500" />
             </a>
@@ -109,7 +117,6 @@ const Navbar = () => {
         )}
       </nav>
 
-      {/* BOOKING MODAL */}
       <BookingModal
         open={openBooking}
         onClose={() => setOpenBooking(false)}
